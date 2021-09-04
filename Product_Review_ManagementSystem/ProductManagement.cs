@@ -20,10 +20,17 @@ namespace Product_Review_ManagementSystem
                 Console.WriteLine("Product Id: " + item.ProductID + "User Id: " + item.UserID + "Product Rating: " + item.Rating + "Is Like: " + item.IsLike);
             }
         }
-
-        internal void TopRecords()
+        public void SelectedRecords(List<ProductReview> review)
         {
-            throw new NotImplementedException();
+            var recordedData = from productReviews in review
+                               where (productReviews.ProductID == 1 && productReviews.Rating > 3) || (productReviews.ProductID == 4 && productReviews.Rating > 3) ||
+                               (productReviews.ProductID == 9 && productReviews.Rating > 3)
+                               select productReviews;
+            foreach (var list in recordedData)
+            {
+                Console.WriteLine("ProductID:-" + list.ProductID + " " + "UserID:-" + list.UserID
+                    + " " + "Rating:-" + list.Rating + " " + "Review:-" + list.Review + " " + "isLike:-" + list.IsLike);
+            }
         }
     }
 }
