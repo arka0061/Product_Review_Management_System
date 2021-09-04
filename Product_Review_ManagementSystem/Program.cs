@@ -40,9 +40,14 @@ namespace Product_Review_ManagementSystem
                 products.Add(new ProductReview() { ProductID = 25, UserID = 25, Review = "Average", Rating = 11, IsLike = true });
             }
             ProductManagement manage = new ProductManagement();
+            Console.WriteLine("TOP 3 RECORDS!");
             manage.TopRecords(products);
+            Console.WriteLine("SELECTIVE RECORDS!");
             manage.SelectedRecords(products);
+            Console.WriteLine("SELECTIVE RECORDS BASED ON PRODUCT ID");
             manage.RetrieveCountOfRecords(products);
+            Console.WriteLine("RETRIEVE PRODUCT ID AND REVIEW");
+            manage.RetrieveProductIdAndReview(products);
         }
     }
 }
