@@ -42,6 +42,7 @@ namespace Product_Review_ManagementSystem
             ProductManagement manage = new ProductManagement();
             manage.TopRecords(products);
             manage.SelectedRecords(products);
+            manage.RetrieveCountOfRecords(products);
         }
     }
 }
