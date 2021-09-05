@@ -48,6 +48,8 @@ namespace Product_Review_ManagementSystem
             manage.RetrieveCountOfRecords(products);
             Console.WriteLine("RETRIEVE PRODUCT ID AND REVIEW");
             manage.RetrieveProductIdAndReview(products);
+            Console.WriteLine("Skip Top 5 Records!");
+            manage.SkipTopRecords(products);
         }
     }
 }
