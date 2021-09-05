@@ -52,6 +52,8 @@ namespace Product_Review_ManagementSystem
             manage.SkipTopRecords(products);
             Console.WriteLine("Data Table!");
             manage.ProductReviewsDataTable(products);
+            Console.WriteLine("Retrieve Data From Data Table!");
+            manage.RetriveDataFromDataTable();
         }
     }
 }
